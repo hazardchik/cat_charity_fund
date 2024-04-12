@@ -1,3 +1,4 @@
+import logging
 from typing import Optional, Union
 
 from fastapi import Depends, Request
@@ -66,7 +67,7 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
             self, user: User, request: Optional[Request] = None
     ):
         # Вместо print здесь можно было бы настроить отправку письма.
-        print(f'Пользователь {user.email} зарегистрирован.')
+        logging.info(f'Пользователь {user.email} зарегистрирован.')
 
 
 # Корутина, возвращающая объект класса UserManager.
