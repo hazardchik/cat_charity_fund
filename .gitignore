@@ -132,5 +132,3 @@ dmypy.json
 .idea
 
 *.db
-
-alembic/
